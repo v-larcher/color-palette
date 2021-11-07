@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import { MargaretProvider } from "@tymate/margaret";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <MargaretProvider>
+      <Component {...pageProps} />
+    </MargaretProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
