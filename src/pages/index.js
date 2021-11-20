@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { generateColors } from 'utils/colors';
 
 const ColorBlock = styled.div`
-  width: 200px;
+  flex: 1;
   height: 200px;
   background-color: var(--background-color);
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),

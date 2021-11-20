@@ -69,10 +69,10 @@ const hslToHex = ({ hue, saturation, lightness }) => {
 };
 
 export const generateColors = hexColor => {
+  const colorPalette = {};
   const hslColor = hexToHsl(hexColor);
 
   if (hslColor) {
-    const colorPalette = {};
     const [hue, saturation, lightness] = hslColor;
     let colors = [...Array(10)].map((_, i) => {
       return { hue, saturation, lightness: (lightness + i * 10) % 100 };
@@ -82,9 +82,7 @@ export const generateColors = hexColor => {
     colors.forEach((item, index) => {
       colorPalette[COLOR_GRADUATIONS[index]] = hslToHex(item);
     });
-
-    return colorPalette;
   }
 
-  return [];
+  return colorPalette;
 };
