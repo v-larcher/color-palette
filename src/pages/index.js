@@ -4,6 +4,7 @@ import { Stack } from '@tymate/margaret';
 import Head from 'next/head';
 import styled from 'styled-components';
 
+import { generateAllColors } from 'utils/allColors';
 import { generateColors } from 'utils/colors';
 
 const ColorBlock = styled.div`
@@ -19,7 +20,7 @@ const ColorBlock = styled.div`
 
 const Main = styled.main`
   width: 100%;
-  height: 100vh;
+  height: max(100vh, 100%);
   padding: 1rem 2rem;
   background-color: rgb(237, 242, 247);
 `;
@@ -40,11 +41,14 @@ const Button = styled.button`
 export default function Home() {
   const [color, setColor] = useState('#CAD8EC');
   const [colors, setColors] = useState({});
+  const [allColors, setAllColors] = useState([]);
 
   const handleSubmit = () => {
     if (color.length === 7) {
       const newColors = generateColors(color);
       setColors(newColors);
+      const newAllColors = generateAllColors(color);
+      setAllColors(newAllColors);
     }
   };
 
@@ -77,6 +81,14 @@ export default function Home() {
               <ColorBlock key={index} style={{ '--background-color': color }} />
             ))}
           </Stack>
+
+          {allColors.map((colors, index) => (
+            <Stack key={index} size="full" gap={1} alignY="center" alignX="space-evenly">
+              {Object.values(colors).map((color, index) => (
+                <ColorBlock key={index} style={{ '--background-color': color }} />
+              ))}
+            </Stack>
+          ))}
         </Stack>
       </Main>
     </>

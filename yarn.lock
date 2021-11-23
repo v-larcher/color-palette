@@ -433,6 +433,11 @@
   resolved "https://registry.yarnpkg.com/@xobotyi/scrollbar-width/-/scrollbar-width-1.9.5.tgz#80224a6919272f405b87913ca13b92929bdf3c4d"
   integrity sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==
 
+ac-colors@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/ac-colors/-/ac-colors-1.4.3.tgz#7dca0ecb26253d54268881cb9b4f60c7a7525014"
+  integrity sha512-sq/nwY+gGHH9E2slTA9UO91uHsjrcS5Zdk97olMKbWlv4zc/8TcjQuX6BwrFeCJaMDYS3SZv84nTv+ItHzTWoQ==
+
 acorn-jsx@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
